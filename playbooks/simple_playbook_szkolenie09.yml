@@ -1,0 +1,11 @@
+- hosts: tag_role_awx:&tag_wlasciciel_szkolenie09:%tag_srodowisko_dev
+
+  tasks: 
+  - set_fact:
+      aaa: 1235 
+
+  - ping:
+      data: "{{ aaa }}"
+
+  - name: "wykonaj modul shell"
+    shell: date; whoami
