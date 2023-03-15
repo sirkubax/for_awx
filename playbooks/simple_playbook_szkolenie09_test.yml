@@ -1,0 +1,11 @@
+- hosts: "{{ nasze_hosty }}"
+
+  tasks: 
+  - set_fact:
+      aaa: 1235 
+
+  - ping:
+      data: "{{ aaa }}"
+
+  - name: "wykonaj modul shell"
+    shell: date; whoami
